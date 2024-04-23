@@ -55,8 +55,8 @@ jobs:
           echo Here is the Windows execution policy:
           Get-ExecutionPolicy
 
-      - name: Step 6 - Log the post-build disc space
-        run: df
+      - name: Step 6 - List Windows environment variables
+        run: env
 
   build-on-linux:
     runs-on: ununtu-latest
