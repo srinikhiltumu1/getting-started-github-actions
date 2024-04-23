@@ -45,6 +45,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '21'
+          distribution: 'temurin'
       
       - name: Step 4 - Build your Jakarta Web App using Maven
         run: echo mvn -B package --file pom.xml
