@@ -1,7 +1,8 @@
 name: Publish Github actions artifacts tutorial example
 on:
-  push:
-    branches: [ main ]
+  # push:
+  #   branches: [ main ]
+  workflow_call: 
 jobs:
   archive-build-artifacts:
     runs-on: ubuntu-latest

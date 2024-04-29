@@ -96,3 +96,12 @@ jobs:
       - name: Step 8 - Log the post-build disc space
         run: df
         
+  secrets-in-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step - 1 - Echo out a GitHub Actions secret to the logs
+        run: |
+          echo "The GitHub Actions Secret will be masked: "
+          echo ${{ secrets.GITHUB_TOKEN }}
+          echo "Trick to echo GitHub Actions Secret: "
+          echo ${{ secrets.GITHUB_TOKEN }} | sed 's/./& /g'
