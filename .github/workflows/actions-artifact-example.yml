@@ -3,6 +3,7 @@ on:
   # push:
   #   branches: [ main ]
   workflow_call: 
+  workflow_dispatch: 
 jobs:
   archive-build-artifacts:
     runs-on: ubuntu-latest
