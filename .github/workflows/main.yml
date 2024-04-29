@@ -108,8 +108,7 @@ jobs:
 
       - name: Triggering GitHub workflow
         run: |
-          curl -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          curl -L -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github+json" \
-          # -H "Authorization: Bearer <YOUR-TOKEN>" \
           https://api.github.com/repos/srinikhiltumu1/getting-started-github-actions/actions/workflows/actions-artifact-example.yml/dispatches \
           -d '{"ref":"main"}}'
